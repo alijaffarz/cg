@@ -24,6 +24,7 @@ namespace SeleniumTests
             driver.FindElement(By.Id("login-button")).Click();
 
 
+
             Assert.That(driver.Url.Contains("inventory.html"), "Login failed. User is not on the inventory page.");
             IWebElement titleElement = driver.FindElement(By.XPath("//*[@id=\"header_container\"]/div[1]/div[2]/div"));
             Console.WriteLine(titleElement.Text);
